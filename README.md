@@ -18,22 +18,25 @@ nombrado `UFM-Market-Trends-SDK`.
 Posiblemente corriendo la siguiente serie de comandos:
 
 `cd UFM-Market-Trends-SDK`
+
 `cd sdk`
 
 o `cd UFM-Market-Trends-SDK/sdk`
 
 4. Ejecuta el siguiente comando para crear un entorno virtual.
 Si no estás familiarizado con los entornos virtuales, lee este
-[artículo] (https://python.land/virtual-environments/virtualenv).
+[artículo](https://python.land/virtual-environments/virtualenv).
 
 `python -m venv ./virtual_environment`
 
 Activa el entorno virtual corriendo el siguiente comando.
 
 (Linux y MacOS)
+
 `source virtual_environment/bin/activate`
 
 (Windows)
+
 `env\Scripts\activate.bat`
 
 (Cuidado: En Linux y MacOS corres el comando en base al directorio local que 
@@ -44,7 +47,8 @@ comando `venv` en el paso 4.)
 * Para instalar las dependencias necesarias y empezar a desarrolar la librería, 
 ejecuta el comando `pip install -r requirements.txt`.
 * Si añades una dependencia nueva como parte de tu contribución, no olvides 
-ejecutar el comando `pip freeze`. De este modo, futuros contribuidores al 
+ejecutar el comando `pip freeze > requirements.txt`. De este modo, 
+futuros contribuidores al 
 proyecto podran replicar el mismo entorno virtual que utilizaste. 
 
 
