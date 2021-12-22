@@ -1,1 +1,1 @@
-# UFM-Market-Trends-SDK
+# UFM Market Trends SDK
