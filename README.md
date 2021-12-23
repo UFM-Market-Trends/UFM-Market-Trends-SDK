@@ -38,7 +38,7 @@ Si no estás familiarizado con los entornos virtuales, lee este
 
 `python -m venv ./virtual_environment`
 
-Activa el entorno virtual corriendo el siguiente comando.
+5. Activa el entorno virtual corriendo el siguiente comando.
 
 (Linux y MacOS)
 
@@ -59,8 +59,6 @@ ejecuta el comando `pip install -r requirements.txt`.
 ejecutar el comando `pip freeze > requirements.txt`. De este modo, 
 futuros contribuidores al 
 proyecto podran replicar el mismo entorno virtual que utilizaste. 
-
-
-Para desactivar el entorno virtual, simplemente ejecuta el 
+* Para desactivar el entorno virtual, simplemente ejecuta el 
 comando `deactivate` (por obvias razones, este comando solo funciona mientras 
 estás dentro del entorno virtual).
