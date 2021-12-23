@@ -90,6 +90,15 @@ proyecto podran replicar el mismo entorno virtual que utilizaste.
 comando `deactivate` (por obvias razones, este comando solo funciona mientras 
 estás dentro del entorno virtual).
 
+Para incrementar la versión, utiliza el comando
+
+`git tag 0.1.0` (substituye `0.1.0` por el nuevo número de versión, por ejemplo, `0.2.0`)
+
+y el comando
+
+`git push --tags`.
+
+
 ## Licencia
 
 UFM Market Trends reserva el copyright ⓒ y propiedad intelectual de este software.
