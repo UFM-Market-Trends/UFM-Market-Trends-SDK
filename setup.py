@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='ufm_market_trends',
+    name='ufmtrends-sdk',
     version='0.0.1',
     author='Jose Alvarez',
     author_email='jose@tecuntecs.com',
@@ -16,6 +16,6 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/UFM-Market-Trends/UFM-Market-Trends-SDK/issues"
     },
     license='cc.license',
-    packages=['sdk'],
+    packages=['ufmtrends_sdk'],
     install_requires=['requests'],
 )

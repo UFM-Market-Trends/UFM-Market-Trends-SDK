@@ -1,5 +1,8 @@
 # UFM Market Trends SDK
 
+## Instalación
+
+`pip install git+https://github.com/UFM-Market-Trends/UFM-Market-Trends-SDK.git`
 
 ## Desarrollo
 
@@ -14,14 +17,14 @@ lee este [artículo](https://towardsdatascience.com/terminals-consoles-command-l
 Si has tenido éxito, el resultado es una copia del repositorio dentro de un folder 
 nombrado `UFM-Market-Trends-SDK`. 
 
-3. Accede al subdirectorio `sdk` desde tu terminal. 
+3. Accede al subdirectorio `ufmtrends_sdk` desde tu terminal. 
 Posiblemente corriendo la siguiente serie de comandos:
 
 `cd UFM-Market-Trends-SDK`
 
-`cd sdk`
+`cd ufmtrends_sdk`
 
-o simplemente `cd UFM-Market-Trends-SDK/sdk`
+o simplemente `cd UFM-Market-Trends-SDK/ufmtrends_sdk`
 
 4. Ejecuta el siguiente comando para crear un entorno virtual.
 Si no estás familiarizado con los entornos virtuales, lee este
