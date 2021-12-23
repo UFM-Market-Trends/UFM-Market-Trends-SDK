@@ -2,7 +2,11 @@
 
 ## Instalación
 
+Para instalar la versión más reciente, corre el siguiente comando:
 `pip install git+https://github.com/UFM-Market-Trends/UFM-Market-Trends-SDK.git`
+
+Para instalar una versión específica, corre el siguiente comando:
+`pip install git+https://github.com/UFM-Market-Trends/UFM-Market-Trends-SDK.git@0.0.1`
 
 ## Desarrollo
 
