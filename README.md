@@ -21,7 +21,7 @@ Posiblemente corriendo la siguiente serie de comandos:
 
 `cd sdk`
 
-o `cd UFM-Market-Trends-SDK/sdk`
+o simplemente `cd UFM-Market-Trends-SDK/sdk`
 
 4. Ejecuta el siguiente comando para crear un entorno virtual.
 Si no estás familiarizado con los entornos virtuales, lee este
@@ -41,7 +41,7 @@ Activa el entorno virtual corriendo el siguiente comando.
 
 (Cuidado: En Linux y MacOS corres el comando en base al directorio local que 
 hemos llamado `virtual_environment`, pero en Windows corres el comando en base 
-al script global `env` instalado automáticamente en tu ordenador por el 
+al script global `env` automáticamente instalado en tu ordenador por el 
 comando `venv` en el paso 4.)
 
 * Para instalar las dependencias necesarias y empezar a desarrolar la librería, 
