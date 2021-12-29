@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='ufmtrends-sdk',
-    version='0.0.3',
+    version='0.0.4',
     author='Jose Alvarez',
     author_email='jose@tecuntecs.com',
     description='Testing installation of Package',

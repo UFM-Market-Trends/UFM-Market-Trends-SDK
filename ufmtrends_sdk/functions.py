@@ -52,5 +52,27 @@ def application():
     print(get_yearly_variation(quarter_values_test))
 
 
+def get_yearonyear_variation(values, inter_values_size):
+  '''
+  Entrada:
+    values (list) Valores.
+
+    lot_size (int) Cuantos anteriores valores anteriores a referir para
+      calcular la variación.
+
+  Salida:
+    Return (list) Variaciones inter-<extensión de la inter_values_size>.
+  '''
+  variation = [None if (values[current] == None
+                             or values[current-inter_values_size] == None
+                             or current-inter_values_size < 0)
+                    else 
+                    (values[current] - values[current-inter_values_size]) 
+                    / (values[current-inter_values_size])
+                    for current in range(len(values))]
+
+  return variation
+
+
 if __name__ == '__main__':
     application()

@@ -3,4 +3,4 @@
 # instead of 
 # `from ufmtrends_sdk.functions import test`
 
-from .functions import test, get_yearly_values, get_yearly_variation
+from .functions import test, get_yearly_values, get_yearly_variation, get_yearonyear_variation
