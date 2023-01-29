@@ -149,7 +149,7 @@ def get_preceding_quarter_annualized_variation(quarterly_values):
                                   else 
                                   (quarterly_values[current] - quarterly_values[current-1]) 
                                   / (quarterly_values[current-1])
-                                  for current in range(len(values))]
+                                  for current in range(len(quarterly_values))]
 
   annualized_variation = [None if (variation==None)
                             else  ((1+variation)**4)-1
