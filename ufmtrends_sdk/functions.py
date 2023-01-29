@@ -132,6 +132,31 @@ def application_test3():
   print(get_accumulated_variation(values_test, lot_size=3))
   print(get_accumulated_variation(values_test, lot_size=12))
   
+
+def get_preceding_quarter_annualized_variation(quarterly_values):
+  '''
+  Entrada:
+    quarterly_values (list) Valores trimestrales
+
+  Salida:
+    Return preceding quarter annualized variation 
+    https://www.fool.com/knowledge-center/how-to-calculate-the-annual-growth-rate-for-real-g.aspx.
+  '''
+
+  preceding_quarter_variation = [None if (quarterly_values[current] == None
+                                  or quarterly_values[current-1] == None
+                                  or current-1 < 0)
+                                  else 
+                                  (quarterly_values[current] - quarterly_values[current-1]) 
+                                  / (quarterly_values[current-1])
+                                  for current in range(len(values))]
+
+  annualized_variation = [None if (variation==None)
+                            else  ((1+variation)**4)-1
+                            for variation in preceding_quarter_variation]
+  return annualized_variation
+
+
 if __name__ == '__main__':
     application_test1()
     application_test2()
