@@ -8,6 +8,9 @@ class PDF(FPDF):
 
     def __init__(self, orientation, unit, format, default_label="Informe_Guatemala.png", secondary_label="Market_Trends.png"):
         super().__init__(orientation, unit, format) 
+        self.default_label = default_label
+        self.secondary_label = secondary_label
+
         self.CURR_COL = 0
         self.IS_COVER = True
         # FPDF.accept_page_break = self._accept_page_break
