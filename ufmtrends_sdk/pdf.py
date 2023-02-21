@@ -6,7 +6,7 @@ class PDF(FPDF):
     # CURR_COL = 0 # This is for "static" variables
 
 
-    def __init__(self, orientation, unit, format):
+    def __init__(self, orientation, unit, format, default_label="Informe_Guatemala.png", secondary_label="Market_Trends.png"):
         super().__init__(orientation, unit, format) 
         self.CURR_COL = 0
         self.IS_COVER = True
@@ -52,9 +52,9 @@ class PDF(FPDF):
         super().add_page(orientation=orientation)
         self.IS_COVER = isCover
         print("Adding image...")
-        brand_image =  ('Market_Trends.png' 
+        brand_image =  (self.secondary_label 
                         if self.page_no() % 2 == 0 
-                        else 'Informe_Guatemala.png')
+                        else self.default_label)
         self.image(brand_image, 5, 5, self.WIDTH)
 
     def footer(self):
