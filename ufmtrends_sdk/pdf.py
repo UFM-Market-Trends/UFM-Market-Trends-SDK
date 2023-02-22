@@ -6,7 +6,12 @@ class PDF(FPDF):
     # CURR_COL = 0 # This is for "static" variables
 
 
-    def __init__(self, orientation, unit, format, default_label="Informe_Guatemala.png", secondary_label="Market_Trends.png", title_color=(0, 201, 245)):
+    def __init__(self, orientation, unit, format, 
+                    default_label="Informe_Guatemala.png", 
+                    secondary_label="Market_Trends.png", 
+                    title_color=(0, 201, 245),
+                    delete_temp=True,
+                    tmp="./tmp/mytemp"):
         super().__init__(orientation, unit, format) 
         self.default_label = default_label
         self.secondary_label = secondary_label
@@ -18,10 +23,10 @@ class PDF(FPDF):
         # FPDF.add_page = self._add_page
         # FPDF.footer = self._footer
         
-        self.TMP = "./tmp/mytemp"
+        self.TMP = tmp#"./tmp/mytemp"
         os.makedirs(self.TMP, exist_ok=True)
         filelist=os.listdir(self.TMP)
-        self.DELETE_TEMP = True
+        self.DELETE_TEMP = delete_temp#True
         if self.DELETE_TEMP:
             for file in filelist:
                 os.remove(os.path.join(self.TMP,file))
@@ -122,6 +127,21 @@ class PDF(FPDF):
                             None,
                             self.WIDTH/2-15,
                             px_width=440*x_scale, px_height=292*y_scale)
+
+
+    def insert_500x292_chart(self, name, id, x_scale=1, y_scale=1):
+        self.insert_chart(name, id,
+                            None,
+                            None,
+                            self.WIDTH/2-15,
+                            px_width=500*x_scale, px_height=292*y_scale)
+
+    def insert_WIDTHxHEIGHT_chart(self, name, id, width, height, x_scale=1, y_scale=1):
+        self.insert_chart(name, id,
+                            None,
+                            None,
+                            self.WIDTH/2-15,
+                            px_width=width*x_scale, px_height=height*y_scale)                            
 
     def insert_title(self, text):
         self.set_font('Arial', 'B', 20)
