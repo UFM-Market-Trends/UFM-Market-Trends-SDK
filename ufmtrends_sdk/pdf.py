@@ -136,7 +136,7 @@ class PDF(FPDF):
                             self.WIDTH/2-15,
                             px_width=500*x_scale, px_height=292*y_scale)
 
-    def insert_500x292_chart(self, name, id, x_scale=1, y_scale=1):
+    def insert_650xauto_chart(self, name, id, x_scale=1, y_scale=1):
         self.insert_chart(name, id,
                             None,
                             None,
