@@ -6,10 +6,11 @@ class PDF(FPDF):
     # CURR_COL = 0 # This is for "static" variables
 
 
-    def __init__(self, orientation, unit, format, default_label="Informe_Guatemala.png", secondary_label="Market_Trends.png"):
+    def __init__(self, orientation, unit, format, default_label="Informe_Guatemala.png", secondary_label="Market_Trends.png", title_color=(0, 201, 245)):
         super().__init__(orientation, unit, format) 
         self.default_label = default_label
         self.secondary_label = secondary_label
+        self.title_color = title_color
 
         self.CURR_COL = 0
         self.IS_COVER = True
@@ -124,7 +125,8 @@ class PDF(FPDF):
 
     def insert_title(self, text):
         self.set_font('Arial', 'B', 20)
-        self.set_text_color(0, 201, 245)
+        c = self.title_color
+        self.set_text_color(c[0], c[1], c[2])
         self.multi_cell(w=self.WIDTH/2-15, h=7, txt=text,
                     align='L')
         self.ln(5)
